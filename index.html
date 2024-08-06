@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>QR Code Generator</h1>
+    <textarea id="serialNumbers" placeholder="Enter serial numbers, one per line..." oninput="updateCharacterCount()"></textarea>
+    <p id="charCount">0 / 1600 characters</p>
+    <br>
+    <button onclick="generateQRCode()">Generate QR Code</button>
+    <div id="qrCode"></div>
+    <p id="errorMessage" class="error"></p>
+    <a id="downloadLink" style="display:none;">Download QR Code</a>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
