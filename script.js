@@ -31,7 +31,7 @@ function generateQRCode() {
         return;
     }
 
-    QRCode.toDataURL(combinedSerialNumbers, { errorCorrectionLevel: 'L' }, function (err, url) {
+    QRCode.toDataURL(combinedSerialNumbers, { errorCorrectionLevel: 'L', width: 177, height: 177 }, function (err, url) { // 177px = 5cm
         if (err) {
             console.error(err);
             return;
